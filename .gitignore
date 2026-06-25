@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Private personal document — never publish (contains СНИЛС, personal data)
+ПФР.pdf
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.out
+*.run.xml
+*-blx.bib
+*.fls
+*.fdb_latexmk
+*.synctex.gz

@@ -1,0 +1,109 @@
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt, a4paper]{russell}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.3cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% russell Colors: russell-emerald, russell-skyblue, russell-red, russell-pink, russell-orange
+%                 russell-nephritis, russell-concrete, russell-darknight, russell-purple
+% Monochrome: all text, headers, links and section rules stay black.
+\colorlet{russell}{russell-black}
+% Tighten the vertical rhythm so the CV stays compact (4 pages).
+\renewcommand{\acvSectionTopSkip}{1.6mm}
+\renewcommand{\acvSectionContentTopSkip}{1.1mm}
+\setlength{\bibitemsep}{1.5pt}
+% Make publication subsection titles bold so they stand out from body text
+\renewcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\bfseries\scshape\textcolor{text}{#1}}}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with russell color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Андрей}{Веприков}
+\position{Исследователь в области обучения ИИ{\enskip\cdotp\enskip}Аспирант МФТИ}
+% \address{YOUR ADDRESS}
+
+\mobile{+7(912)759-62-52}
+\email{veprikov.as@phystech.edu}
+\github{github.com/Vepricov}
+\dateofbirth{21 Декабря 2001}
+%\homepage{www.posquit0.com} 
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+\googlescholar{https://scholar.google.com/citations?user=KAidIJQAAAAJ&hl=ru}{Андрей Веприков}
+\telegram{shkodnik1917}
+% \extrainfo{extra information}
+
+% \quote{``Simplicity is deceptively complicated."}
+
+
+%-------------------------------------------------------------------------------
+ %	BIBLIOGRAPHY
+ %-------------------------------------------------------------------------------
+\addbibresource{cv/references.bib}
+
+%-------------------------------------------------------------------------------
+\usepackage[english,russian]{babel}
+% Safety net so no word ever protrudes into the margin
+\emergencystretch=2em
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\selectlanguage{russian}\today}
+  {}
+  {\thepage}
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{cv/summary.tex}
+\input{cv/education.tex}
+\input{cv/experience.tex}
+\input{cv/publications.tex}
+\input{cv/projects.tex}
+\input{cv/service.tex}
+\input{cv/achievements.tex}
+\input{cv/skills.tex}
+\input{cv/Schools}
+\input{cv/publications_more.tex}
+%\input{cv/interests.tex}
+%\input{cv/languages.tex}
+
+\vspace*{\fill}
+%-------------------------------------------------------------------------------
+\end{document}
